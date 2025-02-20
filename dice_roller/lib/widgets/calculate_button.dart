@@ -1,6 +1,5 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'dart:developer' as developer;
 
 class CalculateButton extends StatelessWidget {
   final String selectedDice;
