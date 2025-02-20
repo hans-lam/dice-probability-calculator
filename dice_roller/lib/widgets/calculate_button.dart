@@ -175,37 +175,40 @@ class CalculateButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(right: 24.0),
-          child: ElevatedButton(
-            onPressed: () => _calculateProbability(context),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-              foregroundColor: Colors.black,
-              textStyle: TextStyle(
-                fontSize: 18.0,
-                fontWeight: FontWeight.w500,
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 48.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(right: 24.0),
+            child: ElevatedButton(
+              onPressed: () => _calculateProbability(context),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+                foregroundColor: Colors.black,
+                textStyle: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
+              child: const Text('Calculate'),
             ),
-            child: const Text('Calculate'),
           ),
-        ),
-        ElevatedButton(
-          onPressed: () => _rollDice(context), 
-          style: ElevatedButton.styleFrom(
-              backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-              foregroundColor: Colors.black,
-              textStyle: TextStyle(
-                fontSize: 18.0,
-                fontWeight: FontWeight.w500,
-              ),
+          ElevatedButton(
+            onPressed: () => _rollDice(context), 
+            style: ElevatedButton.styleFrom(
+                backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+                foregroundColor: Colors.black,
+                textStyle: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.w500,
+                ),
+            ),
+            child: const Text('Roll Dice'),
           ),
-          child: const Text('Roll Dice'),
-        ),
-      ]
+        ]
+      ),
     );
   }
 }
